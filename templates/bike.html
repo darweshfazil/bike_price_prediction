@@ -77,8 +77,8 @@
             <div class="col-md-6 form">
                 <form action="/" method="POST">
                     <div class="form-group">
-                        <label for="power" class="control-label">Power</label>
-                        <input id="power" name="power" class="form-control" placeholder="Enter the bhp">
+                        <label for="power" class="control-label">Cubic Capacity</label>
+                        <input id="power" name="power" class="form-control" placeholder="Enter the Cubic capacity">
                     </div>
 
                     <div class="form-group">
@@ -88,7 +88,7 @@
 
                     <div class="form-group">
                         <label for="year" class="control-label">Active Years</label>
-                        <input id="year" name="year" type="number" class="form-control" placeholder="Enter year of Manufacture" minlength="4" maxlength="4">
+                        <input id="year" name="year" type="number" class="form-control" placeholder="Enter the active years" minlength="4" maxlength="4">
                     </div>
                     
                     <div class="form-group">
@@ -113,7 +113,7 @@
         <div class="row">
             <div class="col-md-12" align="center">
                     {% if c %}
-                    <h1>The Bike cost is Rs.{{c}}</h1>
+                    <h1>Predicted price of the bike is Rs.{{c}}</h1>
                     {% endif %}
             </div>
         </div>
