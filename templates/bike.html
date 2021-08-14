@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <style>
+        .navbar-fixed-top{
+            background-color: black;
+            height:60px;
+            font-size: 18px;
+            padding:5px;
+        }
+        body{
+            background-color: aqua;
+            color: white;
+        }
+        .welcome{
+            background-color:black;
+            text-align:center;
+            padding-top:100px;
+            padding-bottom:80px;
+        }
+        .bar, .head, .calculate{
+            background-color:black;
+        }
+        .form{
+            color: black;
+            font-size: 18px;
+            font-family: calibri;
+        }
+        .form-area{
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand" style="color: aqua; font-size:28px;">ADF</a>&nbsp; &nbsp;
+            </div>
+            <div class="collapse navbar-collapse head" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#" style="color:aqua">Home</a></li>
+                <li><a href="#" style="color:aqua">Models</a></li>
+                <li><a href="#" style="color:aqua">Projects</a></li>
+                <li><a href="#" style="color:aqua">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="margin-top:50px">
+        <div class="row">
+            <div class="col-md-12 welcome">
+                <span style="font-size:72px;">Welcome, Human<br></span>
+                <span style="font-size:18px;">Ready to predict the price?</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container form-area">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 form">
+                <form action="/" method="POST">
+                    <div class="form-group">
+                        <label for="power" class="control-label">Power</label>
+                        <input id="power" name="power" class="form-control" placeholder="Enter the bhp">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kms" class="control-label">KMs Driven</label>
+                        <input id="kms" name="kms" type="number" class="form-control" placeholder="Enter Total KMs Driven">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="year" class="control-label">Active Years</label>
+                        <input id="year" name="year" type="number" class="form-control" placeholder="Enter year of Manufacture" minlength="4" maxlength="4">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="owner" class="control-label">Ownership</label>
+                        <select id="owner" name="owner" class="form-control">
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                        </select>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-success calculate"><i class="fa fa-money"></i>&nbsp&nbspCalculate</button>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid welcome">
+        <div class="row">
+            <div class="col-md-12" align="center">
+                    {% if c %}
+                    <h1>The Bike cost is Rs.{{c}}</h1>
+                    {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>

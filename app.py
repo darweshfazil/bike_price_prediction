@@ -4,7 +4,7 @@ import predict as p
 
 app = Flask(__name__)
 
-cost=0
+cost = 0
 
 @app.route("/", methods = ["GET", "POST"])
 def hello():
@@ -18,7 +18,7 @@ def hello():
         cost_predict = p.price_prediction(power, kms, year, owner)
         cost = cost_predict
 
-    return render_template("bike.html", c=format(cost))
+    return render_template("bike.html", c=int(cost))
 
 if __name__ == "__main__":
     app.run(debug=True)
