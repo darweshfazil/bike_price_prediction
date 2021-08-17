@@ -104,7 +104,6 @@ def price_prediction(brand, power, kms, year, owner):
     y = bike["price"]
 
     value(brand)
-    print(TVS)
     X_test = np.array([kms, owner, year, power, BMW, Bajaj, Benelli, Ducati, HarleyDavidson, Hero, Honda, Hyosung, Ideal, Indian, Jawa, KTM, Kawasaki, LML, MV, Mahindra, Rajdoot, RoyalEnfield, Suzuki, TVS, Triumph, Yamaha, Yezdi])
     X_test = X_test.reshape((1,-1))
     
