@@ -50,7 +50,52 @@ def value(brand):
         global Yezdi 
         Yezdi = 0
 
-        brand = 1
+        if(brand=="BMW"):
+            BMW = 1
+        elif(brand=="Bajaj"):
+            Bajaj = 1
+        elif(brand=="Benelli"):
+            Benelli = 1
+        elif(brand=="Ducati"):
+            Ducati = 1
+        elif(brand=="HarleyDavidson"):
+            HarleyDavidson = 1
+        elif(brand=="Hero"):
+            Hero = 1
+        elif(brand=="Honda"):
+            Honda = 1
+        elif(brand=="Hyosung"):
+            Hyosung = 1
+        elif(brand=="Ideal"):
+            Ideal = 1
+        elif(brand=="Indian"):
+            Indian = 1
+        elif(brand=="Jawa"):
+            Jawa = 1
+        elif(brand=="KTM"):
+            KTM = 1
+        elif(brand=="Kawasaki"):
+            Kawasaki = 1
+        elif(brand=="LML"):
+            LML = 1
+        elif(brand=="MV"):
+            MV = 1
+        elif(brand=="Mahindra"):
+            Mahindra = 1
+        elif(brand=="Rajdoot"):
+            Rajdoot = 1
+        elif(brand=="RoyalEnfield"):
+            RoyalEnfield = 1
+        elif(brand=="Suzuki"):
+            Suzuki = 1
+        elif(brand=="TVS"):
+            TVS = 1
+        elif(brand=="Triumph"):
+            Triumph = 1
+        elif(brand=="Yamaha"):
+            Yamaha = 1
+        elif(brand=="Yezdi"):
+            Yezdi = 1
 
 def price_prediction(brand, power, kms, year, owner):
     bike = pd.read_csv("bikes.csv")
@@ -59,6 +104,7 @@ def price_prediction(brand, power, kms, year, owner):
     y = bike["price"]
 
     value(brand)
+    print(TVS)
     X_test = np.array([kms, owner, year, power, BMW, Bajaj, Benelli, Ducati, HarleyDavidson, Hero, Honda, Hyosung, Ideal, Indian, Jawa, KTM, Kawasaki, LML, MV, Mahindra, Rajdoot, RoyalEnfield, Suzuki, TVS, Triumph, Yamaha, Yezdi])
     X_test = X_test.reshape((1,-1))
     
