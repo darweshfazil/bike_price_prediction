@@ -11,13 +11,12 @@ def hello():
     if request.method=="POST":
         global cost
         brand = request.form["brand"]
-        city = request.form["city"]
         power = request.form["power"]
         kms = request.form["kms"]
         year = request.form["year"]
         owner = request.form["owner"]
 
-        cost_predict = p.price_prediction(power, kms, year, owner)
+        cost_predict = p.price_prediction(brand,power, kms, year, owner)
         cost = cost_predict
 
     return render_template("bike.html", c=int(cost))
