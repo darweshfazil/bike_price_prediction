@@ -10,6 +10,8 @@ cost = 0
 def hello():
     if request.method=="POST":
         global cost
+        brand = request.form["brand"]
+        city = request.form["city"]
         power = request.form["power"]
         kms = request.form["kms"]
         year = request.form["year"]
