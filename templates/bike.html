@@ -15,7 +15,7 @@
             padding:5px;
         }
         body{
-            background-color: aqua;
+            background-color:#007fff;
             color: white;
         }
         .welcome{
@@ -47,14 +47,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand" style="color: aqua; font-size:28px;">ADF</a>&nbsp; &nbsp;
+                <a href="#" class="navbar-brand" style="color: #007fff; font-size:24px;font-weight:bolder;">adf</a>&nbsp; &nbsp;
             </div>
             <div class="collapse navbar-collapse head" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="#" style="color:aqua">Home</a></li>
-                <li><a href="#" style="color:aqua">Models</a></li>
-                <li><a href="#" style="color:aqua">Projects</a></li>
-                <li><a href="#" style="color:aqua">Contact</a></li>
+                <li><a href="#" style="color:white">Home</a></li>
+                <li><a href="#" style="color:white">Models</a></li>
+                <li><a href="#" style="color:white">Projects</a></li>
+                <li><a href="#" style="color:white">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 
@@ -107,17 +107,17 @@
 
                     <div class="form-group">
                         <label for="power" class="control-label">Cubic Capacity</label>
-                        <input id="power" name="power" class="form-control" placeholder="Enter the Cubic capacity">
+                        <input id="power" name="power" type="number" class="form-control" placeholder="Enter the Cubic capacity" required>
                     </div>
 
                     <div class="form-group">
                         <label for="kms" class="control-label">KMs Driven</label>
-                        <input id="kms" name="kms" type="number" class="form-control" placeholder="Enter Total KMs Driven">
+                        <input id="kms" name="kms" type="number" class="form-control" placeholder="Enter Total KMs Driven" required>
                     </div>
 
                     <div class="form-group">
                         <label for="year" class="control-label">Active Years</label>
-                        <input id="year" name="year" type="number" class="form-control" placeholder="Enter the active years" minlength="4" maxlength="4">
+                        <input id="year" name="year" type="number" class="form-control" placeholder="Enter the active years" required>
                     </div>
                     
                     <div class="form-group">
@@ -132,6 +132,8 @@
                     </div>
                     <br>
                     <button type="submit" class="btn btn-success calculate"><i class="fa fa-money"></i>&nbsp&nbspCalculate</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="clear" class="btn btn-danger calculate"><i class="fa fa-refresh"></i>&nbsp&nbspReset</button>
                 </form>
             </div>
             <div class="col-md-3"></div>
